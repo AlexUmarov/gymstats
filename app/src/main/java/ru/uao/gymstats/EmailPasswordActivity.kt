@@ -78,8 +78,7 @@ class EmailPasswordActivity: AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this@EmailPasswordActivity, "Aвторизация успешна", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivityForResult(intent, ADD_TASK_REQUEST)
+                    this@EmailPasswordActivity.startActivity(Intent(this@EmailPasswordActivity, MainActivity::class.java))
                 } else
                     Toast.makeText(this@EmailPasswordActivity, "Aвторизация провалена", Toast.LENGTH_SHORT).show()
             }

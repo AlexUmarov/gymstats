@@ -6,17 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <LinearLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="405dp"
+        android:layout_height="619dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CalendarView
+            android:id="@+id/calendarWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/WorkoutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/selectedDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="selectedDate"
+                android:textAlignment="center" />
+
+            <Spinner
+                android:id="@+id/workoutListType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/WorkoutTypeList" />
+
+            <Button
+                android:id="@+id/btn_addWorkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="add" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

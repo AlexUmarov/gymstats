@@ -3,15 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196875" />
         <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.21184738955823293" />
         <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout-w936dp/activity_login.xml" value="0.247265625" />
         <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/activity_email_password.xml" value="0.33" />
         <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/activity_login.xml" value="0.3296875" />
-        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/activity_main.xml" value="0.18072916666666666" />
+        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/app_bar_main.xml" value="0.30842391304347827" />
         <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/content_main.xml" value="0.25" />
         <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/fragment_gallery.xml" value="0.3296875" />
-        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/fragment_home.xml" value="0.3296875" />
+        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/fragment_slideshow.xml" value="0.3129528985507246" />
+        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/layout/nav_header_main.xml" value="0.3129528985507246" />
+        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
+        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/menu/main.xml" value="0.3296875" />
+        <entry key="..\:/AndroidProject/gymstats/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.196875" />
+        <entry key="..\:/AndroidSdk/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.31476449275362317" />
       </map>
     </option>
   </component>

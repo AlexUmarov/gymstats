@@ -2,8 +2,8 @@
     <string name="app_name">gym.stats</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Статистика</string>
+    <string name="nav_header_subtitle">asocil@mail.ru</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -16,9 +16,14 @@
     <item name="etPassword" type="id">Password</item>
     <item name="btLogin" type="id">Login</item>
     <item name="btRegist" type="id">Regist</item>-->
-    <string name="login">Login</string>
-    <string name="registr">Registr</string>
+    <string name="login">Вход</string>
+    <string name="registr">Регистрация</string>
     <string name="qwerty">qwerty</string>
     <string name="test_mail_ru">test@mail.ru</string>
 
+    <string-array name="WorkoutTypeList">
+        <item>Type1</item>
+        <item>Type2</item>
+        <item>Type3</item>
+    </string-array>
 </resources>
