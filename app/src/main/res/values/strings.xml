@@ -12,12 +12,12 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <!-- Strings related to login -->
-    <string name="etMail">Email</string>
-    <string name="etPassword">Password</string>
-    <string name="btLogin">Login</string>
-    <string name="btRegist">Regist</string>
-    <string name="registr">Registr</string>
+    <!--<item name="etMail" type="id">Email</item>
+    <item name="etPassword" type="id">Password</item>
+    <item name="btLogin" type="id">Login</item>
+    <item name="btRegist" type="id">Regist</item>-->
     <string name="login">Login</string>
+    <string name="registr">Registr</string>
     <string name="qwerty">qwerty</string>
     <string name="test_mail_ru">test@mail.ru</string>
 

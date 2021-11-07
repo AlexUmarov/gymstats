@@ -31,14 +31,10 @@ class EmailPasswordActivity: AppCompatActivity() {
         val myRef = database.getReference("message")
         println("myRef "+myRef)
 
-        var etMail = findViewById<EditText>(R.string.etMail)
-        var etPassword = findViewById<EditText>(R.string.etPassword)
-
-        /*Fdb.showElement(
-                    {list -> initList(list)},
-                    {e -> text.text = e})*/
-        var btnLogin = findViewById(R.string.btLogin) as Button
-        var btnRegist = findViewById(R.string.btRegist) as Button
+        var etMail = findViewById<EditText>(R.id.etMail)
+        var etPassword = findViewById<EditText>(R.id.etPassword)
+        var btnLogin = findViewById<Button>(R.id.btLogin)
+        var btnRegist = findViewById<Button>(R.id.btRegist)
 
 
         btnLogin.setOnClickListener{
