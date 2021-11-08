@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">gym.stats</string>
+    <string name="app_name">Gym stats</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Статистика</string>
@@ -11,17 +11,17 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
-    <!-- Strings related to login -->
-    <!--<item name="etMail" type="id">Email</item>
-    <item name="etPassword" type="id">Password</item>
-    <item name="btLogin" type="id">Login</item>
-    <item name="btRegist" type="id">Regist</item>-->
     <string name="login">Вход</string>
     <string name="registr">Регистрация</string>
     <string name="qwerty">qwerty</string>
     <string name="test_mail_ru">test@mail.ru</string>
+    <string name="addWorkoutInfo">Add workout Information</string>
+    <string name="workoutInfo">set workout</string>
+    <string name="set_count">set count</string>
+    <string name="set_weight">set weight</string>
 
     <string-array name="WorkoutTypeList">
+        <item>weight</item>
         <item>Type1</item>
         <item>Type2</item>
         <item>Type3</item>
