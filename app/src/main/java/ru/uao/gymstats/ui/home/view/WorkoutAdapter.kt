@@ -12,10 +12,10 @@ import ru.uao.gymstats.ui.home.data.Workout
 
 class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>()
 {
-    inner class WorkoutViewHolder(v:View):RecyclerView.ViewHolder(v){
-        var workoutInfo:EditText = v.findViewById(R.id.workoutInfo)
-        var count:EditText = v.findViewById(R.id.count)
-        var weight:EditText = v.findViewById(R.id.weight)
+    inner class WorkoutViewHolder(  v:View):RecyclerView.ViewHolder(v){
+        var workoutInfo:TextView = v.findViewById(R.id.workoutInfo)
+        var count:TextView = v.findViewById(R.id.count)
+        var weight:TextView = v.findViewById(R.id.weight)
         var mMenus:ImageView = v.findViewById(R.id.mMenus)
 
         init {
@@ -31,8 +31,11 @@ class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerV
                     R.id.editText->{
                         val v = LayoutInflater.from(c).inflate(R.layout.add_item,null)
                         val workoutInfo = v.findViewById<EditText>(R.id.workoutInfo)
+                        workoutInfo.setText(position.workoutInfo)
                         val count = v.findViewById<EditText>(R.id.count)
+                        count.setText(position.count)
                         val weight = v.findViewById<EditText>(R.id.weight)
+                        weight.setText(position.weight.toInt())
                         AlertDialog.Builder(c)
                             .setView(v)
                             .setPositiveButton("Ok"){
@@ -93,15 +96,15 @@ class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerV
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkoutViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val v  = inflater.inflate(R.layout.fragment_home,parent,false)
+        val v  = inflater.inflate(R.layout.list_item,parent,false)
         return WorkoutViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: WorkoutViewHolder, position: Int) {
         val newList = workoutList[position]
-        holder.workoutInfo.setText(newList.workoutInfo)
-        holder.count.setText(newList.count.toString())
-        holder.weight.setText(newList.weight.toString())
+        holder.workoutInfo.text = newList.workoutInfo
+        holder.count.text = newList.count.toString()
+        holder.weight.text = newList.weight.toString()
     }
 
     override fun getItemCount(): Int {

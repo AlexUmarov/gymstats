@@ -1,100 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_cardview"
+    style="@style/Base.CardView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0">
 
     <LinearLayout
-        android:id="@+id/calendarLayout"
-        android:layout_width="405dp"
-        android:layout_height="619dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
-        <CalendarView
-            android:id="@+id/calendarWorkout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        android:id="@+id/base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <!--<LinearLayout
-            android:id="@+id/WorkoutLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
+            tools:context=".ui.home.HomeFragment">
 
+            <!--<LinearLayout
+        android:id="@+id/calendarLayout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="50dp">-->
 
-            &lt;!&ndash;<TextView
-                android:id="@+id/selectedWorkoutDateString"
+            <ImageButton
+                android:id="@+id/arrow_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="selectedDate"
-                android:textAlignment="center" />
-
-            <Spinner
-                android:id="@+id/workoutListType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/WorkoutTypeList" />
-
-            <Button
-                android:id="@+id/btn_addWorkout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="add" />&ndash;&gt;
-
-        </LinearLayout>-->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                android:src="@drawable/common_full_open_on_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/base_cardview"
+                app:layout_constraintVertical_bias="0.0" />
 
             <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_margin="15dp"
-                android:padding="4dp"
+                android:id="@+id/hidden_view"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:id="@+id/mTitle"
-                    android:text="Title"
-                    android:textColor="@color/black"
-                    android:textSize="19sp"
-                    android:textStyle="bold"
-                    android:layout_margin="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/mSubTitle"
-                    android:text="SubTitle"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_margin="6dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-            <ImageView
-                android:id="@+id/mMenus"
-                android:src="@drawable/ic_more"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
-        </LinearLayout>
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/addingWorkoutBtn"
-            android:src="@drawable/ic_add"
-            app:tint="@color/white"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/arrow_button">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <CalendarView
+                    android:id="@+id/calendarWorkout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!--</LinearLayout>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addingWorkoutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="15dp"
+                android:src="@drawable/ic_add"
+                app:tint="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

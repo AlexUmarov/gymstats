@@ -40,21 +40,22 @@
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
         <EditText
             android:id="@+id/count"
-            android:hint="@string/set_count"
-            android:inputType="numberDecimal"
-            android:textColor="@color/teal_700"
-            android:background="@drawable/shape_background"
-            android:padding="15dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="15dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_background"
+            android:hint="@string/set_count"
+            android:inputType="number"
+            android:padding="15dp"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp"
+            android:textStyle="bold" />
         <EditText
             android:id="@+id/weight"
             android:hint="@string/set_weight"
