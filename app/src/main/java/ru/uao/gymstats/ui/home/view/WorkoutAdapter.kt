@@ -1,4 +1,4 @@
-package com.malkinfo.editingrecyclerview.view
+package ru.uao.gymstats.ui.home.view
 
 import android.app.AlertDialog
 import android.content.Context
@@ -33,9 +33,9 @@ class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerV
                         val workoutInfo = v.findViewById<EditText>(R.id.workoutInfo)
                         workoutInfo.setText(position.workoutInfo)
                         val count = v.findViewById<EditText>(R.id.count)
-                        count.setText(position.count)
+                        count.setText(position.count.toString())
                         val weight = v.findViewById<EditText>(R.id.weight)
-                        weight.setText(position.weight.toInt())
+                        weight.setText(position.weight.toString())
                         AlertDialog.Builder(c)
                             .setView(v)
                             .setPositiveButton("Ok"){
@@ -46,6 +46,7 @@ class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerV
 
                                 notifyDataSetChanged()
                                 Toast.makeText(c,"User Information is Edited",Toast.LENGTH_SHORT).show()
+
                                 dialog.dismiss()
 
                             }

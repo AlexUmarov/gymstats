@@ -27,25 +27,15 @@
             app:layout_constraintBottom_toBottomOf="@+id/base_cardview"
             tools:context=".ui.home.HomeFragment">
 
-            <!--<LinearLayout
-        android:id="@+id/calendarLayout"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="50dp">-->
-
             <ImageButton
                 android:id="@+id/arrow_button"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/common_full_open_on_phone"
+                android:src="@android:drawable/ic_dialog_dialer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/base_cardview"
-                app:layout_constraintVertical_bias="0.0" />
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <LinearLayout
                 android:id="@+id/hidden_view"
@@ -70,9 +60,15 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="bottom|center"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/save_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="save" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/addingWorkoutBtn"
@@ -87,7 +83,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mRecycler"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
             </androidx.recyclerview.widget.RecyclerView>
 
