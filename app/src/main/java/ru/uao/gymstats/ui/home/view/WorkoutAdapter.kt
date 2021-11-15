@@ -15,6 +15,7 @@ class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerV
     inner class WorkoutViewHolder(  v:View):RecyclerView.ViewHolder(v){
         var workoutInfo:TextView = v.findViewById(R.id.workoutInfo)
         var count:TextView = v.findViewById(R.id.count)
+        var numberOfRepeat:TextView = v.findViewById(R.id.numberOfRepeat)
         var weight:TextView = v.findViewById(R.id.weight)
         var mMenus:ImageView = v.findViewById(R.id.mMenus)
 
@@ -32,6 +33,8 @@ class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerV
                         val v = LayoutInflater.from(c).inflate(R.layout.add_item,null)
                         val workoutInfo = v.findViewById<EditText>(R.id.workoutInfo)
                         workoutInfo.setText(position.workoutInfo)
+                        val numberOfRepeat = v.findViewById<EditText>(R.id.numberOfRepeat)
+                        numberOfRepeat.setText(position.numberOfRepeat.toString())
                         val count = v.findViewById<EditText>(R.id.count)
                         count.setText(position.count.toString())
                         val weight = v.findViewById<EditText>(R.id.weight)
@@ -41,6 +44,7 @@ class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerV
                             .setPositiveButton("Ok"){
                                     dialog,_->
                                 position.workoutInfo = workoutInfo.text.toString()
+                                position.numberOfRepeat = numberOfRepeat.text.toString().toInt()
                                 position.count = count.text.toString().toInt()
                                 position.weight = weight.text.toString().toFloat()
 
@@ -104,6 +108,7 @@ class WorkoutAdapter(val c:Context,val workoutList:ArrayList<Workout>):RecyclerV
     override fun onBindViewHolder(holder: WorkoutViewHolder, position: Int) {
         val newList = workoutList[position]
         holder.workoutInfo.text = newList.workoutInfo
+        holder.numberOfRepeat.text = newList.numberOfRepeat.toString()
         holder.count.text = newList.count.toString()
         holder.weight.text = newList.weight.toString()
     }

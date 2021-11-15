@@ -17,8 +17,16 @@
     <string name="test_mail_ru">test@mail.ru</string>
     <string name="addWorkoutInfo">Add workout Information</string>
     <string name="workoutInfo">set workout</string>
+    <string name="numberOfRepeat">number of repeat</string>
     <string name="set_count">set count</string>
     <string name="set_weight">set weight</string>
+    <string name="body_Weight">set body Weight</string>
+    <string name="save_text">save</string>
+    <string name="password_text">password</string>
+    <string name="email_text">email</string>
+    <string name="todo">TODO</string>
+    <string name="show_calendar">show_calendar</string>
+    <string name="number_of_repeat">number of repeat</string>
 
     <string-array name="WorkoutTypeList">
         <item>weight</item>

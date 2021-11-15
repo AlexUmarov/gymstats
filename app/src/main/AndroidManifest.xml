@@ -4,11 +4,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_baseline_insights_24"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_baseline_insights_24"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Gymstats">
+        android:theme="@style/Theme.Gymstats"
+        android:screenOrientation="sensorPortrait">
 
         <activity
             android:name=".EmailPasswordActivity"
@@ -17,12 +18,13 @@
             android:theme="@style/Theme.Gymstats.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+
+        <activity android:name=".ui.statistics.BarChartActivity"/>
+        <activity android:name=".MainActivity"/>
+
     </application>
 
 </manifest>

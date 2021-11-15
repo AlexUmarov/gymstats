@@ -29,12 +29,16 @@
 
             <ImageButton
                 android:id="@+id/arrow_button"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_dialog_dialer"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/show_calendar"
+                android:minHeight="48dp"
+                android:src="@android:drawable/ic_menu_month"
+                app:layout_constraintEnd_toEndOf="@id/hidden_view"
                 app:layout_constraintHorizontal_bias="0"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/hidden_view"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <LinearLayout
@@ -64,11 +68,31 @@
             android:gravity="bottom|center"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/save_data"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bodyWeightText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="save" />
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="32dp"
+                android:hint="@string/body_Weight">
+
+                <!--this is the actual edit text which takes the input-->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bodyWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal|numberSigned"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/save_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/save_text"
+                android:textAlignment="center"
+                android:textAllCaps="false" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/addingWorkoutBtn"
@@ -78,7 +102,8 @@
                 android:layout_margin="15dp"
                 android:src="@drawable/ic_add"
                 app:tint="@color/white"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="SpeakableTextPresentCheck"
+                android:contentDescription="@string/todo" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mRecycler"

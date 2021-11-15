@@ -9,71 +9,101 @@
 
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="@string/addWorkoutInfo"
-            android:textStyle="bold"
-            android:textSize="19sp"
-            android:textColor="@color/white"
-            android:background="@color/teal_700"
-            android:padding="10dp"
-            android:elevation="15dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/workoutInfo"
-            android:hint="@string/workoutInfo"
-            android:inputType="text"
-            android:textColor="@color/teal_700"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:background="@drawable/shape_background"
-            android:padding="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/count"
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/shape_background"
-            android:hint="@string/set_count"
-            android:inputType="number"
-            android:padding="15dp"
-            android:textColor="@color/teal_700"
-            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:background="@color/teal_700"
+            android:elevation="15dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/addWorkoutInfo"
+            android:textColor="@color/white"
+            android:textSize="19sp"
             android:textStyle="bold" />
-        <EditText
-            android:id="@+id/weight"
-            android:hint="@string/set_weight"
-            android:inputType="phone"
-            android:textColor="@color/teal_700"
-            android:background="@drawable/shape_background"
-            android:padding="15dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="15dp"
+
+        <AutoCompleteTextView
+            android:id="@+id/workoutInfo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:dropDownAnchor="@+id/button"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:text="xcv"/>
+
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/workoutInfoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/workoutInfo">
+
+            &lt;!&ndash;this is the actual edit text which takes the input&ndash;&gt;
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/workoutInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/numberOfRepeatText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/numberOfRepeat">
+
+            <!--this is the actual edit text which takes the input-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/numberOfRepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/countText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/set_count">
 
+            <!--this is the actual edit text which takes the input-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/weightText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
+            android:hint="@string/set_weight">
+
+            <!--this is the actual edit text which takes the input-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal|numberSigned"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
-
 </LinearLayout>
